@@ -38,8 +38,8 @@ export class AppComponent {
 
   // tslint:disable-next-line:typedef
   addArticle() {
-    this.article.title = document.getElementById('article-title').value;
-    this.article.url = document.getElementById('article-url').value;
+    this.article.title = (<HTMLInputElement> document.getElementById('article-title')).value;
+    this.article.url = (<HTMLInputElement> document.getElementById('article-url')).value;
     this.articles.push(this.article);
   }
 
